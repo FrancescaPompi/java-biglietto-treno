@@ -21,11 +21,11 @@ public class CalcolaBiglietto {
 		double seniorDiscount = ticketPrice - (ticketPrice / 100 * 40);
 		
 		if(age < 18) {
-			System.out.print("The ticket costs: " + minorsDiscount);
+			System.out.print("The ticket costs: " + minorsDiscount + "€");
 		} else if(age > 65) {
-			System.out.print("The ticket costs: " + seniorDiscount);
+			System.out.print("The ticket costs: " + seniorDiscount + "€");
 		} else {
-			System.out.print("The ticket costs: " + ticketPrice);
+			System.out.print("The ticket costs: " + ticketPrice + "€");
 		}
 		
 
