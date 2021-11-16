@@ -17,19 +17,21 @@ public class CalcolaBiglietto {
 		age = scanner.nextInt();
 		
 		double ticketPrice = 0.21 * numberOfKilometers;
-		double minorsDiscount = ticketPrice - (ticketPrice / 100 * 20);
-		double seniorDiscount = ticketPrice - (ticketPrice / 100 * 40);
+		double totalPrice;
 		
 		if(age < 18) {
-			System.out.print("The ticket costs: " + minorsDiscount + "€");
+			totalPrice = ticketPrice - (ticketPrice / 100 * 20);
 		} else if(age > 65) {
-			System.out.print("The ticket costs: " + seniorDiscount + "€");
+			totalPrice = ticketPrice - (ticketPrice / 100 * 40);
 		} else {
-			System.out.print("The ticket costs: " + ticketPrice + "€");
+			totalPrice = 0.21 * numberOfKilometers;
 		}
+		
+		System.out.print("The ticket costs: " + totalPrice + " €");
 		
 
 		scanner.close();
+
 	}
 
 }
